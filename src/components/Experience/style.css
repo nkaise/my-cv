@@ -1,0 +1,37 @@
+.experience-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+}
+
+.experience-company {
+    margin-bottom: 10px;
+}
+
+.experience-years {
+    margin-bottom: 10px;
+}
+
+.experience-positions {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 800px) {
+    .experience-block {
+        grid-template-columns: 370px 360px;
+    }
+}
+
+@media (max-width: 750px) {
+    .experience-block {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .experience-company,
+    .experience-years,
+    .experience-positions {
+        text-align: center;
+    }
+}

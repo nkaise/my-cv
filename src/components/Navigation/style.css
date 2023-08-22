@@ -1,0 +1,124 @@
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    margin-bottom: 40px;
+}
+
+.nav-button {
+    display: none;
+}
+
+.header-row {
+    display: grid;
+    grid-template-columns: 300px auto;
+    column-gap: 30px;
+    align-items: center;
+}
+
+.header-img img {
+    border-radius: 80%;
+    box-shadow: 1px 1px 20px 3px #D3902A;
+}
+
+.header-text {
+    padding-left: 10px;
+}
+
+.header-text-title {
+    font-size: 32px;
+    color: #D3902A;
+    margin-bottom: 10px;
+}
+
+.header-text-subtitle {
+    margin-bottom: 20px;
+    text-align: left !important; 
+}
+
+.header-contacts > li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.header-contacts li a {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.icon-switch-theme {
+    cursor: pointer;
+}
+
+.sun-to-dark,
+.sun-to-light {
+    display: none;
+    width: 25px;
+    height: 25px;
+}
+
+.sun-to-dark.active,
+.sun-to-light.active {
+    display: block;
+}
+
+@media (max-width: 734px) {
+    .header-row {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    
+    .header-text-subtitle,
+    .header-contacts {
+        text-align: center;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    .nav-button {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .nav.open .nav-list {
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+        padding-top: 30px;
+        font-size: 28px;
+        line-height: 80px;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgb(211, 144, 42);
+        position: absolute;
+    } 
+
+    .nav-button {
+        z-index: 101;
+    }
+
+    .icon-theme {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+}
+
+@media (max-width: 404px) {
+    .header-text-title {
+        text-align: center;
+    }
+}

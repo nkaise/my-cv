@@ -1,0 +1,27 @@
+.education-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+}
+
+.education-title {
+    margin-bottom: 10px;
+}
+
+.education-years {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.education-courses li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 750px) {
+    .education-block {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        text-align: center;
+    }
+}
